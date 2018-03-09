@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 <!-- product tags-->  
 <style>
   body {
@@ -65,8 +68,39 @@
   #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
   #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
   #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
-  #myVideo { position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;}
 
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -111,9 +145,38 @@
 	      
 	      
 <div id="section2" class="container-fluid">
-  <h1>Section 2</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <h1>Our mission</h1>
+	
+<!-- video background start -->	
+ <video autoplay muted loop id="myVideo">
+  <source src="https://www.youtube.com/embed/InYSfKjVr7I?ecver=2" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>OUr mission</h1>
+  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+	
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+<!-- video background end -->
+	
 </div>
 <div id="section3" class="container-fluid">
   <h1>Section 3</h1>
@@ -170,7 +233,7 @@ $(document).ready(function(){
                   <li class="list-inline-item"><a class="btn-floating btn-sm btn-fb mx-1"><i class="fa fa-facebook"> </i></a></li>
                   <li class="list-inline-item"><a class="btn-floating btn-sm btn-tw mx-1"><i class="fa fa-twitter"> </i></a></li>
                   <li class="list-inline-item"><a class="btn-floating btn-sm btn-gplus mx-1"><i class="fa fa-instagram"> </i></a></li>
-                               </ul>
+              </ul>
           </div>
           </div>	      
           <!--/.Social buttons-->
