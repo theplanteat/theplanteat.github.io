@@ -71,7 +71,65 @@ background: url(https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg
   #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
   #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
   #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
-	
+
+/* custom box for contacts */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+/* end box customization */
+
   </style>
 	
 </head>
@@ -120,38 +178,55 @@ background: url(https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+      <img src="/w3images/team1.jpg" alt="Jacob" style="width:100%">
       <div class="container">
-        <h2>Jane Doe</h2>
-        <p class="title">CEO & Founder</p>
+        <h2>Jacob Yang</h2>
+        <p class="title">CEO & CTO</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p>info@theplanteat.com</p>
       </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+      <img src="/w3images/team2.jpg" alt="James" style="width:100%">
       <div class="container">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
+        <h2>James</h2>
+        <p class="title">Marketing Manager</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p>james@theplanteat.com</p>
+      </div>
+    </div>
+ <div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="James" style="width:100%">
+      <div class="container">
+        <h2>Andrew</h2>
+        <p class="title">Marketing Manager</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>james@theplanteat.com</p>
       </div>
     </div>
   </div>
+<div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="James" style="width:100%">
+      <div class="container">
+        <h2>Brant-- Tempo.</h2>
+        <p class="title">Marketing Manager</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>james@theplanteat.com</p>
+    </div>
+ </div>
   <div class="column">
     <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+      <img src="/w3images/team3.jpg" alt="Jessy" style="width:100%">
       <div class="container">
-        <h2>John Doe</h2>
+        <h2>Jessy </h2>
         <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
       </div>
     </div>
   </div>
